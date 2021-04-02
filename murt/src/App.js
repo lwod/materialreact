@@ -6,6 +6,8 @@ import Button from '@material-ui/core/Button'
 import SaveIcon from '@material-ui/icons/Save'
 import ButtonGroup from '@material-ui/core/ButtonGroup'
 import DeleteIcon from '@material-ui/icons/Delete'
+import FormControlLabel from '@material-ui/core/FormControlLabel'
+
 
 import Checkbox from '@material-ui/core/Checkbox'
 
@@ -13,12 +15,17 @@ function CheckboxExample(){
     const [checked, setChecked] = useState(true)
     return(
         <div>
-            <Checkbox
-                checked={checked}
-                onChange={(e)=>setChecked(e.target.checked)}
-                color={'secondary'}
-                // disabled={true}
-            />
+            <FormControlLabel
+                control={
+                    <Checkbox
+                    checked={checked}
+                    onChange={(e)=>setChecked(e.target.checked)}
+                    inputProps={{
+                        'arial-label' : 'secondary checkbox'
+                    }}
+                    />
+                }
+                label={"Test checkbox"}/>
         </div>
     )
 }
