@@ -72,35 +72,37 @@ function CheckboxExample(){
 function App() {
   return (
         <ThemeProvider theme={theme}>
-            <Container maxWidth={'xs'}>
+            <Container
+                maxWidth={'xs'}
+            >
     <div className="App">
       <header className="App-header">
           <ButtonStyled/>
-          <Grid container spacing={4} justify={'center'}>
-              <Grid item>
+          <Grid container spacing={2} justify={'center'}>
+              <Grid item xs={3} sm={6}>
                   <Paper style={{
                       height:75,
-                      width: 50,
+                      width: '100%',
                   }} />
               </Grid>
-              <Grid item>
+              <Grid item xs={3} sm={6}>
                   <Paper style={{
                       height:75,
-                      width: 50,
+                      width: '100%',
                   }} />
               </Grid>
-              <Grid item>
+              <Grid item xs={3} sm={6}>
                   <Paper style={{
                       height:75,
-                      width: 50,
+                      width: '100%',
                   }} />
               </Grid>
-              <Grid item>
-                  <Paper style={{
-                      height:75,
-                      width: 50,
-                  }} />
-              </Grid>
+              {/*<Grid item xs={3}>*/}
+              {/*    <Paper style={{*/}
+              {/*        height:75,*/}
+              {/*        width: 50,*/}
+              {/*    }} />*/}
+              {/*</Grid>*/}
           </Grid>
           
           <TextField
