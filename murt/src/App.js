@@ -11,6 +11,23 @@ import TextField from '@material-ui/core/TextField'
 
 import Checkbox from '@material-ui/core/Checkbox'
 
+import {makeStyles} from "@material-ui/core";
+const useStyles = makeStyles({
+    root:{
+        border:0,
+        borderRadius:15,
+        color:"white",
+        padding: '0 30px',
+        background:"linear-gradient(45deg, #333, #000)",
+        marginBottom : 15,
+    }
+})
+
+function ButtonStyled(){
+    const classes = useStyles();
+    
+    return <Button className={classes.root}>Test Styled Button</Button>
+}
 
 function CheckboxExample(){
     const [checked, setChecked] = useState(true)
@@ -37,13 +54,16 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+          <ButtonStyled/>
           <TextField
               // variant={"filled"}
               variant={"outlined"}
               color={"primary"}
               // type={"date"}
-              type={'time'}
+              type={'email'}
               label={"The time"}
+              
+              value={"test@test.com"}
           />
         <img src={logo} className="App-logo" alt="logo" />
         
@@ -63,8 +83,9 @@ function App() {
         </ButtonGroup>
           
         <CheckboxExample/>
-        
-        
+    
+
+
       </header>
     </div>
   );
