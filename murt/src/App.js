@@ -10,8 +10,11 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         
         <Button
-            // href={'#'}
-            onClick={()=>alert('some str 2')}
+            size = 'large'
+            // style={{
+            //     fontSize: 24
+            // }}
+            // disabled={true}
             variant={'contained'}
             color={'primary'}>
             Some str
