@@ -3,6 +3,8 @@ import './App.css';
 
 import Button from '@material-ui/core/Button'
 import SaveIcon from '@material-ui/icons/Save'
+import ButtonGroup from '@material-ui/core/ButtonGroup'
+import DeleteIcon from '@material-ui/icons/Delete'
 
 function App() {
   return (
@@ -10,13 +12,21 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         
-        <Button
-            startIcon={<SaveIcon/>}
-            size = 'large'
-            variant={'contained'}
-            color={'primary'}>
-            Some str
-        </Button>
+        <ButtonGroup variant={'contained'} color={'primary'}>
+            <Button
+                startIcon={<SaveIcon/>}
+            >
+                Save
+            </Button>
+    
+            <Button
+                startIcon={<DeleteIcon/>}
+            >
+                Discard
+            </Button>
+
+        </ButtonGroup>
+        
         
       </header>
     </div>
