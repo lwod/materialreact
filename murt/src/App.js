@@ -15,6 +15,11 @@ import {makeStyles, ThemeProvider, createMuiTheme} from "@material-ui/core/style
 
 import {green, orange} from "@material-ui/core/colors";
 
+import Container from '@material-ui/core/Container'
+
+import Paper from '@material-ui/core/Paper'
+import Grid from '@material-ui/core/Grid'
+
 const useStyles = makeStyles({
     root:{
         border:0,
@@ -67,9 +72,37 @@ function CheckboxExample(){
 function App() {
   return (
         <ThemeProvider theme={theme}>
+            <Container maxWidth={'xs'}>
     <div className="App">
       <header className="App-header">
           <ButtonStyled/>
+          <Grid container spacing={4} justify={'center'}>
+              <Grid item>
+                  <Paper style={{
+                      height:75,
+                      width: 50,
+                  }} />
+              </Grid>
+              <Grid item>
+                  <Paper style={{
+                      height:75,
+                      width: 50,
+                  }} />
+              </Grid>
+              <Grid item>
+                  <Paper style={{
+                      height:75,
+                      width: 50,
+                  }} />
+              </Grid>
+              <Grid item>
+                  <Paper style={{
+                      height:75,
+                      width: 50,
+                  }} />
+              </Grid>
+          </Grid>
+          
           <TextField
               // variant={"filled"}
               variant={"outlined"}
@@ -103,6 +136,7 @@ function App() {
 
       </header>
     </div>
+            </Container>
         </ThemeProvider>
   );
 }
