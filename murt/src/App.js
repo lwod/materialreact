@@ -8,7 +8,15 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <Button>Some str</Button>
+        
+        <Button
+            // href={'#'}
+            onClick={()=>alert('some str 2')}
+            variant={'contained'}
+            color={'primary'}>
+            Some str
+        </Button>
+        
       </header>
     </div>
   );
