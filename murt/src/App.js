@@ -11,7 +11,10 @@ import TextField from '@material-ui/core/TextField'
 
 import Checkbox from '@material-ui/core/Checkbox'
 
-import {makeStyles} from "@material-ui/core";
+import {makeStyles, ThemeProvider, createMuiTheme} from "@material-ui/core/styles";
+
+import {green, orange} from "@material-ui/core/colors";
+
 const useStyles = makeStyles({
     root:{
         border:0,
@@ -20,6 +23,17 @@ const useStyles = makeStyles({
         padding: '0 30px',
         background:"linear-gradient(45deg, #333, #000)",
         marginBottom : 15,
+    }
+})
+
+const theme = createMuiTheme({
+    palette:{
+        primary:{
+            main: green[400],
+        },
+        secondary:{
+            main: orange[500],
+        }
     }
 })
 
@@ -52,6 +66,7 @@ function CheckboxExample(){
 
 function App() {
   return (
+        <ThemeProvider theme={theme}>
     <div className="App">
       <header className="App-header">
           <ButtonStyled/>
@@ -88,6 +103,7 @@ function App() {
 
       </header>
     </div>
+        </ThemeProvider>
   );
 }
 
